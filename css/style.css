@@ -1,117 +1,241 @@
 /*
-    Theme - Task Manager
-    Version - 1.0
-    Author - Vijay Thapa
+    Theme - Task Manager (Revamped)
+    Version - 2.0
+    Author - Saseetha
 */
 
-*{
+/* Reset and base font */
+* {
     margin: 0;
     padding: 0;
-    font-family: verdana;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.wrapper{
-    width: 70%;
-    margin: 0 auto;
-    padding: 2%;
+/* Background and container */
+body {
+    background-image: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1740&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    min-height: 100vh;
 }
 
-h1{
-    color: #3867d6;
-    margin-bottom: 2%;
-}
-h3{
-    margin: 2% 0;
-}
-
-.menu{
-    margin-bottom: 2%;
+/* Centered wrapper with glass effect */
+.wrapper {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.menu a{
-    font-weight: bold;
-    margin-right: 1%;
-    color: black;
+/* Headings */
+h1, h3 {
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #f1c40f;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+/* Navigation menu */
+.menu {
+    margin-bottom: 25px;
+}
+
+.menu a {
+    color: #f1f1f1;
     text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: rgba(241, 196, 15, 0.1);
+    transition: all 0.3s ease;
 }
 
-.menu a:hover{
-    text-decoration: underline;
+.menu a:hover {
+    background-color: #f1c40f;
+    color: #000;
 }
 
-.btn-primary{
-    background-color: #26de81;
-    padding: 5px;
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    padding: 8px 16px;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    display: inline-block;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-.btn-primary:hover{
-    background-color: #20bf6b;
+.btn-primary {
+    background-color: #2ecc71;
+    color: #fff;
 }
 
-.btn-secondary{
-    background-color: #778ca3;
-    padding: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-}
-.btn-secondary:hover{
-    background-color: #4b6584;
+.btn-primary:hover {
+    background-color: #27ae60;
 }
 
-.btn-lg{
+.btn-secondary {
+    background-color: #34495e;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #2c3e50;
+}
+
+.btn-lg {
     width: 50%;
 }
 
-
-.tbl-full{
+/* Tables */
+.tbl-full,
+.tbl-half {
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-table tr th{
+.tbl-half {
+    width: 50%;
+}
+
+table tr th,
+table tr td {
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid black;
-    padding: 1%;
-    padding-top: 3%;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
 }
 
-table tr td{
-    padding: 1%;
+table tr th {
+    background-color: rgba(241, 196, 15, 0.2);
 }
 
-.tbl-half{
-    width: 40%;
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
+/* Scrollbar style (optional) */
+::-webkit-scrollbar {
+    width: 8px;
+}
 
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.4);
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: #f1c40f;
+    border-radius: 10px;
+}/* Update and Delete link styles */
+.action-link {
+    font-weight: bold;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
 
+/* Update link style */
+.action-update {
+    color: #ffffff;
+    background-color: #3498db;
+}
 
+.action-update:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
 
+/* Delete link style */
+.action-delete {
+    color: #ffffff;
+    background-color: #e74c3c;
+    margin-left: 8px;
+}
 
+.action-delete:hover {
+    background-color: #c0392b;
+    color: #fff;
+}
+/* Stylish action buttons */
+.action-link {
+    font-weight: bold;
+    padding: 4px 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
 
+/* Update button */
+.action-update {
+    color: #ffffff;
+    background-color: #3498db;
+}
 
+.action-update:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
 
+/* Delete button */
+.action-delete {
+    color: #ffffff;
+    background-color: #e74c3c;
+    margin-left: 8px;
+}
 
+.action-delete:hover {
+    background-color: #c0392b;
+    color: #fff;
+}/* Action buttons for update and delete */
+.action-link {
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
 
+/* Update button style */
+.action-update {
+    background-color: #3498db;
+    color: #fff;
+}
 
+.action-update:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
 
+/* Delete button style */
+.action-delete {
+    background-color: #e74c3c;
+    color: #fff;
+    margin-left: 8px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.action-delete:hover {
+    background-color: #c0392b;
+    color: #fff;
+}
 
 

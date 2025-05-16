@@ -149,9 +149,9 @@
                                 <td><?php echo $priority; ?></td>
                                 <td><?php echo $deadline; ?></td>
                                 <td>
-                                    <a href="<?php echo SITEURL; ?>update-task.php?task_id=<?php echo $task_id; ?>">Update </a>
-                                    
-                                    <a href="<?php echo SITEURL; ?>delete-task.php?task_id=<?php echo $task_id; ?>">Delete</a>
+<a href="<?php echo SITEURL; ?>update-task.php?task_id=<?php echo $task_id; ?>" class="action-link action-update">Update</a>
+<a href="<?php echo SITEURL; ?>delete-task.php?task_id=<?php echo $task_id; ?>" class="action-link action-delete">Delete</a>
+
                                 
                                 </td>
                             </tr>
